@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e591dbb0-f4cc-489d-8803-4295814e3738" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestBlogPro/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestBlogPro/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestBlogPro/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestBlogPro/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/home_app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -115,7 +115,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1764571642516</updated>
-      <workItem from="1764571652716" duration="2325000" />
+      <workItem from="1764571652716" duration="3207000" />
     </task>
     <servers />
   </component>
