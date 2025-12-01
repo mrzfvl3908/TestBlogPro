@@ -5,7 +5,7 @@ from django.db import models
 class Post(models.Model):
     #category
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    #image
+    image = models.ImageField(upload_to="images/blog")
     title = models.CharField(max_length=200)
     short_description = models.TextField()
     description = models.TextField()
