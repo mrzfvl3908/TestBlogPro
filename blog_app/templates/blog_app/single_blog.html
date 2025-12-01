@@ -38,8 +38,9 @@
                                         <img src="{{ post.image.url }}" alt="">
                                     </div>
                                     <div class="down-content">
-                                        <span>Lifestyle</span>
-                                        <a href="{% url 'blog_app:single_blog' pid=post.id %}"><h4>{{ post.title }}</h4></a>
+                                        <span>{{ post.category.all| join:", " }}</span>
+                                        <a href="{% url 'blog_app:single_blog' pid=post.id %}"><h4>{{ post.title }}</h4>
+                                        </a>
                                         <ul class="post-info">
                                             <li><a href="#">{{ post.author.get_full_name }}</a></li>
                                             <li><a href="#">{{ post.created_date }}</a></li>
@@ -76,7 +77,8 @@
                                         <ul>
                                             <li>
                                                 <div class="author-thumb">
-                                                    <img src="{% static 'assets/images/comment-author-01.jpg' %}" alt="">
+                                                    <img src="{% static 'assets/images/comment-author-01.jpg' %}"
+                                                         alt="">
                                                 </div>
                                                 <div class="right-content">
                                                     <h4>Charles Kate<span>May 16, 2020</span></h4>
@@ -88,7 +90,8 @@
                                             </li>
                                             <li class="replied">
                                                 <div class="author-thumb">
-                                                    <img src="{% static 'assets/images/comment-author-02.jpg' %}" alt="">
+                                                    <img src="{% static 'assets/images/comment-author-02.jpg' %}"
+                                                         alt="">
                                                 </div>
                                                 <div class="right-content">
                                                     <h4>Thirteen Man<span>May 20, 2020</span></h4>
@@ -98,7 +101,8 @@
                                             </li>
                                             <li>
                                                 <div class="author-thumb">
-                                                    <img src="{% static 'assets/images/comment-author-03.jpg' %}" alt="">
+                                                    <img src="{% static 'assets/images/comment-author-03.jpg' %}"
+                                                         alt="">
                                                 </div>
                                                 <div class="right-content">
                                                     <h4>Belisimo Mama<span>May 16, 2020</span></h4>
@@ -110,7 +114,8 @@
                                             </li>
                                             <li class="replied">
                                                 <div class="author-thumb">
-                                                    <img src="{% static 'assets/images/comment-author-02.jpg' %}" alt="">
+                                                    <img src="{% static 'assets/images/comment-author-02.jpg' %}"
+                                                         alt="">
                                                 </div>
                                                 <div class="right-content">
                                                     <h4>Thirteen Man<span>May 22, 2020</span></h4>
@@ -212,7 +217,9 @@
                                     </div>
                                     <div class="content">
                                         <ul>
-                                            {{ post.category.all| join:", " }}
+                                            {% for cat in sidebar_categories %}
+                                                <li><a href="#">{{ cat.name }}</a></li>
+                                            {% endfor %}
                                         </ul>
                                     </div>
                                 </div>

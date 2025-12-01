@@ -3,9 +3,8 @@ from blog_app.models import Post, Category
 
 
 def blog(request):
-    category = Category.objects.all()
     posts = Post.objects.all()
-    return render(request, 'blog_app/blog.html', {'posts': posts, 'category': category})
+    return render(request, 'blog_app/blog.html', {'posts': posts})
 
 
 def single_blog(request,pid):
