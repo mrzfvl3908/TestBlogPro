@@ -1,10 +1,11 @@
 from django.shortcuts import render, get_object_or_404
-from blog_app.models import Post
+from blog_app.models import Post, Category
 
 
 def blog(request):
+    category = Category.objects.all()
     posts = Post.objects.all()
-    return render(request, 'blog_app/blog.html', {'posts': posts})
+    return render(request, 'blog_app/blog.html', {'posts': posts, 'category': category})
 
 
 def single_blog(request,pid):
