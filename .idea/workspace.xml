@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e591dbb0-f4cc-489d-8803-4295814e3738" name="Changes" comment="" />
+    <list default="true" id="e591dbb0-f4cc-489d-8803-4295814e3738" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog_app/templates/blog_app/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog_app/templates/blog_app/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog_app/templatetags/blog_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_app/templatetags/blog_tags.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -66,6 +70,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\DjangoProject\TestBlogPro\statics" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\DjangoProject\TestBlogPro\blog_app\templates\blog_app" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="TestBlogPro" type="Python.DjangoServer" factoryName="Django server">
@@ -113,6 +120,8 @@
       <workItem from="1764571652716" duration="6194000" />
       <workItem from="1764598594913" duration="6356000" />
       <workItem from="1764618370305" duration="836000" />
+      <workItem from="1764659063552" duration="1267000" />
+      <workItem from="1764692625914" duration="3094000" />
     </task>
     <servers />
   </component>
