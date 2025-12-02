@@ -10,7 +10,7 @@
             <ul>
                 {% for category in categories %}
                 <li>
-                    <a href="#">{{ category.name }}</a>
+                    <a href="{% url 'blog_app:category' cat_name=category.name %}">{{ category.name }}</a>
                     <p>{{ category.post_count }}</p>
                 </li>
                 {% endfor %}
