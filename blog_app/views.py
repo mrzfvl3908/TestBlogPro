@@ -2,8 +2,10 @@ from django.shortcuts import render, get_object_or_404
 from blog_app.models import Post, Category
 
 
-def blog(request):
+def blog(request, author_username=None):
     posts = Post.objects.all()
+    if author_username:
+        posts = posts.filter(author__username=author_username)
     return render(request, 'blog_app/blog.html', {'posts': posts})
 
 
