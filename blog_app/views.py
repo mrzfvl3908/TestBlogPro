@@ -18,3 +18,10 @@ def blog_category(request,cat_name):
     posts = Post.objects.filter(status=1)
     posts = posts.filter(category__name=cat_name)
     return render(request, 'blog_app/blog.html', {'posts': posts})
+
+
+def blog_search(request):
+    posts = Post.objects.filter(status=1)
+    if s := request.GET.get('s'):
+        posts =posts.filter(description__contains=s)
+    return render(request, 'blog_app/blog.html', {'posts': posts})
