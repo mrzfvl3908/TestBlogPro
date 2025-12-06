@@ -1,12 +1,17 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
 from blog_app.models import Post, Category
 
 
 def blog(request, author_username=None):
-    posts = Post.objects.all()
+    posts = Post.objects.filter(status=1)
+    paginator = Paginator(posts, 1)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
     if author_username:
         posts = posts.filter(author__username=author_username)
-    return render(request, 'blog_app/blog.html', {'posts': posts})
+    return render(request, 'blog_app/blog.html', {'page_obj': page_obj})
 
 
 def single_blog(request,pid):

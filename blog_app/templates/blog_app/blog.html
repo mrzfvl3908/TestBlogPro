@@ -32,7 +32,7 @@
                 <div class="col-lg-8">
                     <div class="all-blog-posts">
                         <div class="row">
-                            {% for post in posts %}
+                            {% for post in page_obj %}
                                 <div class="col-lg-6">
                                     <div class="blog-post">
                                         <div class="blog-thumb">
@@ -43,7 +43,9 @@
                                             <a href="{% url 'blog_app:single_blog' pid=post.id %}">
                                                 <h4>{{ post.title }}</h4></a>
                                             <ul class="post-info">
-                                                <li><a href="{% url 'blog_app:author' author_username=post.author.username %}">{{ post.author.get_full_name }}</a></li>
+                                                <li>
+                                                    <a href="{% url 'blog_app:author' author_username=post.author.username %}">{{ post.author.get_full_name }}</a>
+                                                </li>
                                                 <li><a href="#">{{ post.created_date|date:"d/M/Y" }}</a></li>
                                                 <li><a href="#">{{ post.counted_views }}</a></li>
                                             </ul>
@@ -65,12 +67,21 @@
                             {% endfor %}
 
                             <div class="col-lg-12">
-                                <ul class="page-numbers">
-                                    <li><a href="#">1</a></li>
-                                    <li class="active"><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
-                                </ul>
+
+
+                                <nav class="blog-pagination justify-content-center d-flex">
+                                    <ul class="pagination">
+
+                                        {% for num in page_obj.paginator.page_range %}
+                                            {% if num == page_obj.number %}
+                                                <li class="page-item active"><a class="page-link">{{ num }}</a></li>
+                                            {% else %}
+                                                <li class="page-item"><a href="?page={{ num }}"
+                                                                         class="page-link">{{ num }}</a></li>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                
                             </div>
                         </div>
                     </div>
